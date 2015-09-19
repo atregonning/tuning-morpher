@@ -1,14 +1,15 @@
-/* Tuning Trajectory GUI demonstration
+/**
+ * Tuning Trajectory GUI demonstration
  * 
- * Author: Adrian Tregonning
- * Version: 2.0
- * Date: May 2014
+ * <p>TuningTrajectoryGUI is a JApplet that demonstrates the functionality of the 
+ * Tuning trajectory class. A JMSL score is generated, along with facilities 
+ * for editing the tuning system used in the score.</p>
  * 
- * TuningTrajectoryGUI is a JApplet that demonstrates the functionality of the Tuning trajectory class.
- * A JMSL score is generated, along with facilities for editing the tuning system used in the score.
+ * <p>An example of it's use can be seen at 
+ * https://www.youtube.com/watch?v=0A6KDA9k3og</p>
  * 
- * An example of it's use can be seen at https://www.youtube.com/watch?v=0A6KDA9k3og
- *  
+ * @author Adrian Tregonning
+ *   
  */
 
 package com.adriantregonning.javamusic;
@@ -28,12 +29,9 @@ import com.softsynth.jmsl.score.ScoreControlPanel;
 import com.softsynth.view.*;
 
 @SuppressWarnings("serial")
-public class TuningTrajectoryGUI extends JApplet implements CustomFaderListener, ActionListener {
-    
-    /*
-     * Fields
-     */
-    
+public class TuningTrajectoryGUI extends JApplet 
+                    implements CustomFaderListener, ActionListener {
+        
     // Preset source and destination tunings to use
     Tunings sourcePreset = TuningTrajectory.Tunings.TWELVE_TET;
     Tunings destPreset = TuningTrajectory.Tunings.PYTHAG;
@@ -77,7 +75,8 @@ public class TuningTrajectoryGUI extends JApplet implements CustomFaderListener,
     JComboBox destPresetsBox;
 
     // Components for the morphing panel: 
-    // Morph index fader, dropdown list for interpolator choice, text area showing current morph index, button
+    // Morph index fader, dropdown list for interpolator choice, text area 
+    // showing current morph index, button
     CustomFader morphFader;
     JTextArea morphFaderVal;
     String[] interpTypes = {"Linear", "Half Cosine", "Exponential"};
@@ -94,10 +93,6 @@ public class TuningTrajectoryGUI extends JApplet implements CustomFaderListener,
     // Number formatter (used for formatting ratios)
     DecimalFormat newFormat = new DecimalFormat("#.##");
         
-    /*
-     * Methods
-     */
-    
     // Build the score and source and destination tuning trajectories.
     private void buildPiece(boolean withTuningTables) {
         int width, height;
@@ -254,7 +249,8 @@ public class TuningTrajectoryGUI extends JApplet implements CustomFaderListener,
             try {
                 double [] sourceRatios = sourceTablePanel.getFreqTable();
                 double [] destRatios = destTablePanel.getFreqTable();
-                morphTraj = TuningTrajectory.makeInterpolatedTuning(sourceRatios, destRatios, index, interpType);
+                morphTraj = TuningTrajectory.makeInterpolatedTuning(
+                        sourceRatios, destRatios, index, interpType);
                 morphTraj.makeEditorPanel();
                 if (morphTablePanel != null) {
                     morphTablePanel.setFreqTable(morphTraj.getRatios());
