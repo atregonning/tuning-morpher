@@ -17,8 +17,8 @@ import com.softsynth.view.*;
 /**
  * Tuning Trajectory GUI demonstration
  * 
- * <p>TuningTrajectoryGUI is a JApplet that demonstrates the functionality of the 
- * Tuning trajectory class. A JMSL score is generated, along with facilities 
+ * <p>TuningTrajectoryGUI is a JApplet that demonstrates the functionality of 
+ * the TuningTrajectory class. A JMSL score is generated, along with facilities 
  * for editing the tuning system used in the score.</p>
  * 
  * <p>An example of it's use can be seen 
