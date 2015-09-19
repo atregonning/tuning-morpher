@@ -1,17 +1,3 @@
-/**
- * Tuning Trajectory GUI demonstration
- * 
- * <p>TuningTrajectoryGUI is a JApplet that demonstrates the functionality of the 
- * Tuning trajectory class. A JMSL score is generated, along with facilities 
- * for editing the tuning system used in the score.</p>
- * 
- * <p>An example of it's use can be seen at 
- * https://www.youtube.com/watch?v=0A6KDA9k3og</p>
- * 
- * @author Adrian Tregonning
- *   
- */
-
 package com.adriantregonning.javamusic;
 
 import java.awt.*;
@@ -28,6 +14,19 @@ import com.softsynth.jmsl.JMSL;
 import com.softsynth.jmsl.score.ScoreControlPanel;
 import com.softsynth.view.*;
 
+/**
+ * Tuning Trajectory GUI demonstration
+ * 
+ * <p>TuningTrajectoryGUI is a JApplet that demonstrates the functionality of the 
+ * Tuning trajectory class. A JMSL score is generated, along with facilities 
+ * for editing the tuning system used in the score.</p>
+ * 
+ * <p>An example of it's use can be seen 
+ * <a href="https://www.youtube.com/watch?v=0A6KDA9k3og>">here</a>.</p>
+ * 
+ * @author Adrian Tregonning
+ *   
+ */
 @SuppressWarnings("serial")
 public class TuningTrajectoryGUI extends JApplet 
                     implements CustomFaderListener, ActionListener {
